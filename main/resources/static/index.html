@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video autoplay muted loop id="video-bg-1" class="background-video active">
+    <source src="/videos/cafevid2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<header class="header">
+    <img src="/images/coffe-2269724_1920.jpg" alt="Cafe Logo" class="logo-img animated-pulse">
+    <h1 class="logo">Cafe Manager</h1>
+</header>
+<div class="container">
+    <section class="welcome-section animated-fade-in">
+        <h2 class="animated-text">Welcome, Cafe Owner!</h2>
+        <p class="animated-text">Manage your menu and inventory with ease.</p>
+    </section>
+    <div class="menu-form animated-slide-in">
+        <input type="text" id="name" placeholder="Item Name" required>
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="price" placeholder="Price" step="0.01" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <label><input type="checkbox" id="available"> Available</label>
+        <button onclick="addMenuItem()">Add Menu Item</button>
+    </div>
+    <div id="menuGrid" class="menu-grid"></div>
+    <section class="summary-section animated-fade-in">
+        <h3 class="animated-text">Menu Summary</h3>
+        <p id="itemCount">0 items on menu.</p>
+    </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
